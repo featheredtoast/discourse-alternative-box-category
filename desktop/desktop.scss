@@ -1,21 +1,26 @@
 $image-size: 50px;
-.category-boxes .category-box {
-  width: 48%;
-  .category-box-heading {
-    position: relative;
-    img {
-      width: $image-size;
-      height: $image-size;
-      position: absolute;
-      top: 0;
-      left: calc(-1em - #{$image-size});
-      margin: 1em
+.category-boxes {
+  display: block;
+  columns: 2;
+  .category-box {
+    width: 100%;
+    break-inside: avoid;
+    .category-box-heading {
+      position: relative;
+      img {
+        width: $image-size;
+        height: $image-size;
+        position: absolute;
+        top: 0;
+        left: calc(-1em - #{$image-size});
+        margin: 1em
+      }
     }
-  }
-  .category-box-inner {
-    padding-left: calc(#{$image-size} + 1em);
-  }
-  h3, .description {
-    text-align: left;
+    .category-box-inner {
+      padding-left: calc(#{$image-size} + 1em);
+    }
+    h3, .description {
+      text-align: left;
+    }
   }
 }
